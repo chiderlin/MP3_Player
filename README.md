@@ -19,5 +19,5 @@ https://www.youtube.com/watch?v=dCXKxgj70R0
 Tutorial 4:
 https://www.youtube.com/watch?v=1zPyYf_XBD4
 
-Not yet finish~ keep going..
+Not yet finish~ keep going.. (Total 9)
 
