@@ -1,6 +1,9 @@
 # MP3_Player
 Making MP3 player using Python (Tkinter GUI)
 
+![MP3 Player](./music_player.PNG)
+
+
 ## Learning How to make a MP3 Player
 class website: 
 
