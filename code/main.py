@@ -3,6 +3,8 @@ from tkinter import *
 from tkinter import filedialog
 import time
 from mutagen.mp3 import MP3
+import tkinter.ttk as ttk
+
 
 root = Tk()
 root.title('Chi MP3 Player')
@@ -23,11 +25,13 @@ def play_time():
     song = f'C:/Users/user/Desktop/project/mp3_player/mp3/audio/{song}.mp3'
     #取得整首歌曲長度using Mutagen
     song_mut = MP3(song) #load song
+    global song_length
     song_length = song_mut.info.length
     song_length_format = time.strftime('%M:%S', time.gmtime(song_length)) #format
     
     status_bar.after(1000, play_time) #update time #顯示當前時間
     status_bar.config(text=f"{time_format}/{song_length_format}") 
+    my_slider.config(value=current_time) #線照著移動
 
 # add song function
 def add_song():
@@ -61,6 +65,11 @@ def play():
     pygame.mixer.music.play(loops=0)
     # call the play_time function to get song length
     play_time()
+
+    #slider length
+    slider_position = int(song_length)
+    my_slider.config(to=slider_position, value=0)
+
 
 def stop():
     pygame.mixer.music.stop()
@@ -133,7 +142,9 @@ def delete_all_songs():
     song_box.delete(0, END)
     pygame.mixer.music.stop()
 
-
+#Create Slider func
+def slider():
+    pass 
 
 # Create playlist box
 # 黑色框框60px 字:白, 選取背景:灰 , selectforeground="purple"
@@ -187,5 +198,9 @@ remove_song_menu.add_command(label="Delete All Songs From Playlist", command=del
 status_bar = Label(root, text="", bd=1, relief=GROOVE, anchor=E) #text留白,之後要用別的套件輸入時間軸, anchor字的位置:東
 status_bar.pack(fill=X, side=BOTTOM, ipady=2) #ipady:框寬度
 
+
+#Create Music Position Slider
+my_slider = ttk.Scale(root, from_=0, to=100, orient=HORIZONTAL, value=0, length=400, command=slider) #長度0~100%,水平, value從0開始,畫面長度400
+my_slider.pack(pady=30) #slider位置
 
 root.mainloop()

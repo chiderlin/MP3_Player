@@ -1,7 +1,7 @@
 # MP3_Player
 Making MP3 player using Python (Tkinter GUI)
 
-![MP3 Player](./music_player.PNG)
+![MP3 Player](./music_player2.PNG)
 
 
 ## gui from:
@@ -21,6 +21,13 @@ https://www.youtube.com/watch?v=dCXKxgj70R0
 
 Tutorial 4:
 https://www.youtube.com/watch?v=1zPyYf_XBD4
+
+Tutorial 5:
+https://www.youtube.com/watch?v=s_YUe0z09XU
+
+Tutorial 6: Getting confuse.... still working on it .
+https://www.youtube.com/watch?v=CXMcNbo8PLE
+
 
 Not yet finish~ keep going.. (Total 9)
 
